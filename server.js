@@ -205,4 +205,15 @@ app.post('/alltodos', async (req,res)=>{
 	}
 })
 
+if(process.env.NODE_ENV === 'production'){
+  //to return static files
+	app.use(express.static('client/build'));
+  //to return client
+	const path = require('path');
+	app.get('*', (req,res)=>{
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	});
+  //trickle down model followed, routes, static files, client
+}
+
 app.listen(process.env.PORT || 8888);
