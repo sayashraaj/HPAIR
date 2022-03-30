@@ -36,7 +36,7 @@ function OtpVerify(props) {
 		<div className={styles}>
 			<div className={styles.background}>
 				<div className={styles.container}>
-					<div className={styles.heading}>PixCase</div>
+					<div className={styles.heading}>Sayash HPAIR</div>
 					<div className={styles.error}>{error.error}</div>
 					<div className={styles.success}>{error.success}</div>
 					<div className={styles.input_text}>Enter One Time Password:</div>

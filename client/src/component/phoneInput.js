@@ -22,7 +22,7 @@ function PhoneInput(props) {
 		<div className={styles}>
 			<div className={styles.background}>
 				<div className={styles.container}>
-					<div className={styles.heading}>PixCase</div>
+					<div className={styles.heading}>Sayash HPAIR</div>
 					
 					<div className={styles.input_text}>Phone number:</div>
 					<div className={styles.input_container}>
