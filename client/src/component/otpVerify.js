@@ -17,7 +17,8 @@ function OtpVerify(props) {
 
 	const confirmOtp = () => {
 		axios
-			.post('http://localhost:8888/verifyOTP', {
+			// .post('http://localhost:8888/verifyOTP', {
+			.post('https://sayash-hpair.herokuapp.com/verifyOTP', {
 				phone: `${value.phone}`,
 				hash: `${value.hash}`,
 				otp: `${value.otp}`,

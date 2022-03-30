@@ -8,7 +8,8 @@ function Listing({phone}) {
 
   const getalltodosfunction = async ()=>{
   		axios
-			.post('http://localhost:8888/alltodos', {
+			// .post('http://localhost:8888/alltodos', {
+      .post('https://sayash-hpair.herokuapp.com/alltodos', {
 				phone: "+919372870316"
 			})
 			.then(function(res) {
@@ -27,7 +28,8 @@ function Listing({phone}) {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await axios.post('http://localhost:8888/newtodo', {
+      // let res = await axios.post('http://localhost:8888/newtodo', {
+      let res = await axios.post('https://sayash-hpair.herokuapp.com/newtodo', {
       	todo,
       	phone: "+919372870316"
       })

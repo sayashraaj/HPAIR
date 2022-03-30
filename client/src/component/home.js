@@ -36,7 +36,8 @@ function Home() {
 	useEffect(() => {
 		console.log(state.value)
 		axios
-			.post('http://localhost:8888/home', {
+			// .post('http://localhost:8888/home', {
+			.post('https://sayash-hpair.herokuapp.com:8888/home', {
 				withCredentials: true
 			})
 			.then(function(res) {
@@ -50,7 +51,8 @@ function Home() {
 
 	const logout = () => {
 		axios
-			.get('http://localhost:8888/logout')
+			// .get('http://localhost:8888/logout')
+			.get('https://sayash-hpair.herokuapp.com:8888/logout')
 			.then((res) => {
 				console.log(res.data);
 			})
