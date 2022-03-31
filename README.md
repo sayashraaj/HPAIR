@@ -5,9 +5,9 @@ Live Github Link- https://github.com/sayashraaj/HPAIR <br/>
 Live Demo- https://drive.google.com/file/d/1pBCsvkjAAzu3NCpCYvf-5xasFdEwhu--/view?usp=sharing<br/>
 <br/><br/>
 Passwordless Authentication of User in Node(express) and React using JWT and Twilio SMS API without and any database for validating OTP
-Cloud storage used- MongoDB Atlas- NoSQL Database storage system
-
-Environment variables required to run the application,
+Cloud storage used- MongoDB Atlas- NoSQL Database storage system<br/>
+<br/>
+Environment variables required to run the application,<br/>
 Twilio Account SID <br/>
 Twilio Auth Token <br/>
 JWT Auth Token of choice <br/>
