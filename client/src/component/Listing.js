@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 function Listing() {
-  const [phonenumber, setPhonenumber]
+  const [phonenumber, setPhonenumber] = useState("")
   const [todo, setTodo] = useState("");
   const [message, setMessage] = useState("");
   const [List, setList] = useState([]);
@@ -38,7 +38,7 @@ function Listing() {
 	},[]);
 
   useEffect(() => {
-    console.log("hi ,",phone)
+    console.log("hi ,",phonenumber)
     getalltodosfunction();
   },[phonenumber]);
 
