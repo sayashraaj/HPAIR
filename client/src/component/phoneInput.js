@@ -7,7 +7,7 @@ function PhoneInput(props) {
 	const Continue = (e) => {
 		axios
 			// .post('http://localhost:8888/sendOTP', {
-			.post('https://sayash-hpair.herokuapp.com/sendOTP', {
+			.post('/sendOTP', {
 				phone: `${value.phone}`
 			})
 			.then(function(res) {

@@ -9,7 +9,7 @@ function Listing({phone}) {
   const getalltodosfunction = async ()=>{
   		axios
 			// .post('http://localhost:8888/alltodos', {
-      .post('https://sayash-hpair.herokuapp.com/alltodos', {
+      .post('/alltodos', {
 				phone: "+919372870316"
 			})
 			.then(function(res) {
@@ -22,14 +22,15 @@ function Listing({phone}) {
   }
 
   useEffect(() => {
+    console.log("hi ,",phone)
 		getalltodosfunction();
 	},[]);
 
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // let res = await axios.post('http://localhost:8888/newtodo', {
-      let res = await axios.post('https://sayash-hpair.herokuapp.com/newtodo', {
+      let res = await axios.post('http://localhost:8888/newtodo', {
+      // let res = await axios.post('https://sayash-hpair.herokuapp.com/newtodo', {
       	todo,
       	phone: "+919372870316"
       })
