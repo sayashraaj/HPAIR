@@ -11,7 +11,7 @@ function Listing() {
   		axios
 			// .post('http://localhost:8888/alltodos', {
       .post('/alltodos', {
-				phone: "+919372870316"
+				phone: phonenumber
 			})
 			.then(function(res) {
 				console.log(res.data.alltodos)
@@ -39,7 +39,8 @@ function Listing() {
 
   useEffect(() => {
     console.log("hi ,",phonenumber)
-    getalltodosfunction();
+    if(phonenumber!=="") getalltodosfunction();
+    else console.log("empty number")
   },[phonenumber]);
 
   let handleSubmit = async (e) => {
@@ -48,7 +49,7 @@ function Listing() {
       let res = await axios.post('http://localhost:8888/newtodo', {
       // let res = await axios.post('https://sayash-hpair.herokuapp.com/newtodo', {
       	todo,
-      	phone: "+919372870316"
+      	phone: phonenumber
       })
       setMessage("saved successfully")
       window.location.reload(false);
