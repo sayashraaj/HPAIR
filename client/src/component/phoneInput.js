@@ -24,6 +24,15 @@ function PhoneInput(props) {
 			<div className={styles.background}>
 				<div className={styles.container}>
 					<div className={styles.heading}>Sayash HPAIR</div>
+					<center>
+					<div>Contact Details-
+					<br/>
+					Sayash Raaj, IIT Madras
+					<br/>
+					ce19b113@smail.iitm.ac.in
+					</div>
+					<a href="https://www.linkedin.com/in/sayashraaj/">LinkedIn</a>
+					</center>
 					
 					<div className={styles.input_text}>Phone number with country code:</div>
 					<div className={styles.input_container}>
