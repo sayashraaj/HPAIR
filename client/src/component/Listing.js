@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-function Listing({phone}) {
+function Listing() {
+  const [phonenumber, setPhonenumber]
   const [todo, setTodo] = useState("");
   const [message, setMessage] = useState("");
   const [List, setList] = useState([]);
@@ -22,9 +23,24 @@ function Listing({phone}) {
   }
 
   useEffect(() => {
-    console.log("hi ,",phone)
-		getalltodosfunction();
+    axios
+      // .post('http://localhost:8888/home', {
+      .post('/home', {
+        withCredentials: true
+      })
+      .then(function(res) {
+        console.log(res.data.phone.data);
+        setPhonenumber(res.data.phone.data);
+      })
+      .catch(function(error) {
+        console.log(error.response);
+      });
 	},[]);
+
+  useEffect(() => {
+    console.log("hi ,",phone)
+    getalltodosfunction();
+  },[phonenumber]);
 
   let handleSubmit = async (e) => {
     e.preventDefault();
