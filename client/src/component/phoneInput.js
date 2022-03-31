@@ -25,13 +25,13 @@ function PhoneInput(props) {
 				<div className={styles.container}>
 					<div className={styles.heading}>Sayash HPAIR</div>
 					
-					<div className={styles.input_text}>Phone number:</div>
+					<div className={styles.input_text}>Phone number with country code:</div>
 					<div className={styles.input_container}>
 						<input
 							type="tel"
 							value={value.phone}
 							onChange={handleChange('phone')}
-							placeholder="Enter the Phone No."
+							placeholder="+911234567890"
 							className={styles.input}
 						/>
 					</div>

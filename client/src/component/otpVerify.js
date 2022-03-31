@@ -40,13 +40,13 @@ function OtpVerify(props) {
 					<div className={styles.heading}>Sayash HPAIR</div>
 					<div className={styles.error}>{error.error}</div>
 					<div className={styles.success}>{error.success}</div>
-					<div className={styles.input_text}>Enter One Time Password:</div>
+					<div className={styles.input_text}>Enter Your OTP:</div>
 					<div className={styles.input_container}>
 						<input
 							type="tel"
 							value={value.otp}
 							onChange={handleChange('otp')}
-							placeholder="Enter the 6 digits OTP"
+							placeholder="123456"
 							className={styles.input}
 						/>
 					</div>
