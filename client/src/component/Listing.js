@@ -46,8 +46,8 @@ function Listing() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await axios.post('http://localhost:8888/newtodo', {
-      // let res = await axios.post('https://sayash-hpair.herokuapp.com/newtodo', {
+      // let res = await axios.post('http://localhost:8888/newtodo', {
+      let res = await axios.post('/newtodo', {
       	todo,
       	phone: phonenumber
       })
